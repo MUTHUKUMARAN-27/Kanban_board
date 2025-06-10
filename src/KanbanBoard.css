@@ -1,0 +1,256 @@
+/* KanbanBoard.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.board-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.task-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.task-form input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.task-form button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-height: 400px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s;
+}
+
+.column h2 {
+  text-align: center;
+  color: #003366;
+}
+
+.column:nth-child(1) {
+  background-color: #f28b82;
+}
+
+.column:nth-child(2) {
+  background-color: #fdd663;
+}
+
+.column:nth-child(3) {
+  background-color: #81c995;
+}
+
+.card {
+  background-color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  cursor: grab;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 5px;
+}
+
+.trash-drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c00;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.trash-drop-zone span {
+  margin-left: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.delete-btn {
+  background-color: #c00;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #a00;
+}
+
+.cancel-btn:hover {
+  background-color: #999;
+}
+
+.task-form {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  background-color: #f9fbfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(10, 25, 47, 0.08);
+  max-width: 600px;
+  margin: 20px auto;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  border: 1px solid #dce3f0;
+}
+
+.task-form:hover {
+  box-shadow: 0 6px 24px rgba(10, 25, 47, 0.12);
+}
+
+.task-form input[type="text"] {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #eaf0f8;
+  transition: border-color 0.3s ease;
+  color: #0a192f;
+}
+
+.task-form input[type="text"]:focus {
+  border-color: #1e3a8a; 
+  background-color: #ffffff;
+  outline: none;
+}
+
+.task-form button {
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #1e3a8a, #2f4db2); 
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.task-form button:hover {
+  background: linear-gradient(to right, #1c347d, #2c47a4);
+  transform: translateY(-2px);
+}
+
+.trash-drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  margin: 15px auto;
+  padding: 10px;
+}
+
+.trash-drop-zone:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
+
+.trash-drop-zone span {
+  display: none; /* Hide the label if desired */
+}
+.trash-drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 15px auto;
+  padding: 12px; /* Slightly larger padding for better visibility */
+}
+
+.trash-drop-zone:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
